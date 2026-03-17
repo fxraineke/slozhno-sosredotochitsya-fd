@@ -1,5 +1,140 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  background-image: var(--bg-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: var(--bg-color);
+  color: var(--text-accent-color);
+  font-family: "IBM Plex mono", Inter, sans-serif;
+  padding: 10px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  height: 100vh;
+  min-height: 668px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.decorated-zone::after {
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid var(--text-accent-color);
+  border-right: 1px solid var(--text-accent-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.decorated-zone::before {
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-bottom: 1px solid var(--text-accent-color);
+  border-left: 1px solid var(--text-accent-color);
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+}
+
+.decorated-zone__text {
+  color: var(--text-accent-color);
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  line-height: 25px;
+  text-align: center;
+}
+
+.decorated-zone__text::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background-color: var(--text-accent-color);
+  border-radius: 100%;
+  box-shadow: 0 0 4px 2px var(--text-accent-color);
+  margin: 9px 9px 9px 13px;
+}
+
+.header__theme-menu {
+  justify-self: end;
+  margin-block-start: 65px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  color: var(--text-accent-color);
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  height: 26px;
+  min-width: 70px;
+  text-transform: lowercase;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--text-accent-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--text-accent-color);
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  line-height: 83%;
+  color: var(--text-header-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-block-start: 5px;
+}
+
+@media (min-width: 768px) {
+  .header__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
+
+.title-decor {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
+  background-color: var(--accent-color);
+  max-height: max-content;
+  margin-block-start: 30px;
+  color: var(--text-title-color);
+  justify-self: self-end;
+}
+
+@media (min-width: 768px) {
+  .title-decor {
+    max-width: 364px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title-decor {
+    max-width: 491px;
+  }
 }
