@@ -2,6 +2,8 @@
   display: grid;
   gap: 50px;
   max-width: 1024px;
+  margin: 0 auto;
+  padding: 10px;
   color: var(--text-accent-color);
   font-family: "IBM Plex mono", Inter, sans-serif;
   background-color: var(--bg-color);
