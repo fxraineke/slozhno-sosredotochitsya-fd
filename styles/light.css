@@ -1,15 +1,10 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-light {
   --accent-color: #FF8DCB;
   --text-header-color: #FFC2E6;
   --text-accent-color: #353430;
   --text-main-color: #353430;
   --text-title-color: #353430;
+  --button-hover-color: #FF8DCA66;
   --bg-color: #FFF1F7;
   --bg-image: url("/images/cover-image-light.png");
 }
@@ -19,7 +14,7 @@
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root.theme-auto {
     --accent-color: #FF8DCB;
     --text-header-color: #FFC2E6;
     --text-accent-color: #353430;
@@ -30,7 +25,7 @@
     --bg-image: url("/images/cover-image-light.png");
   }
 
-  .decorated-zone__text {
+  .theme-auto .decorated-zone__text {
     display: none;
   }
 }
