@@ -2,7 +2,6 @@
   display: grid;
   gap: 50px;
   max-width: 1024px;
-  padding: 10px;
   color: var(--text-accent-color);
   font-family: "IBM Plex mono", Inter, sans-serif;
   background-color: var(--bg-color);
@@ -10,7 +9,6 @@
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
