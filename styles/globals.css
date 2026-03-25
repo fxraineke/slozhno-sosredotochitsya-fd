@@ -11,6 +11,13 @@ body {
   max-inline-size: 1440px;
   margin: 0;
   padding: 0;
+  color: var(--text-accent-color);
+  font-family: var(--font);
+  background-color: var(--bg-color);
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 h1,

@@ -7,4 +7,5 @@
   --button-hover-color: #FF007066;
   --bg-color: #000028;
   --bg-image: url("/images/cover-image-dark.png");
+  --font: "IBM Plex mono", Inter, sans-serif;
 }

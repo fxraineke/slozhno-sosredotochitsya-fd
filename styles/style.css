@@ -4,13 +4,6 @@
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 10px;
-  color: var(--text-accent-color);
-  font-family: "IBM Plex mono", Inter, sans-serif;
-  background-color: var(--bg-color);
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 @media (min-width: 768px) {
@@ -70,6 +63,7 @@
   color: var(--text-accent-color);
   line-height: 25px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .decorated-zone__text::after {
@@ -292,7 +286,6 @@
 }
 
 .text-link {
-  height: 25px;
   outline: none;
   text-decoration: none;
   text-shadow: 1px 1px 0 var(--accent-color);
